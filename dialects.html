@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dialects</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<body>
+
+	
+	<section class="class_1" >
+		<header class="class_2" >
+			<div class="class_3" >
+				<img src="bg/logo3.png" class="class_4" >
+			</div>
+			<div  class="item_class_0 class_5">
+				<div  class="item_class_1 class_6">
+					<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
+						<path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero" >
+						</path>
+					</svg>
+				</div>
+				<div  class="item_class_2 class_7" style="z-index: 2;">
+					<a href="index.html" class="class_8"  >
+						Home
+					</a>
+					<a href="about.html" class="class_8"  >
+						About us
+					</a>
+          <a href="dialects.html" class="class_8"  >
+						Dialects
+					</a>
+          <a href="forum.html" class="class_8"  >
+						Forum
+					</a>
+				</div>
+			</div>
+			<div class="class_9"  >
+				<img src="assets/images/user.jpg" class="class_10" >
+				Hi, User
+			</div>
+		</header>
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+            <button id="searchButton" class="search-button">Search</button>
+          </div>
+
+          <h2 style="text-align: center; color: #B40023; padding-bottom: 40px;"">Sort By First Letter</h2>
+    
+        <!-- Sorting container -->
+        <div class="sorting-container">
+           <a href="#" class="sorting-link" onclick="sortAlphabetically('A')">A</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('B')">B</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('C')">C</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('D')">D</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('E')">E</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('F')">F</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('G')">G</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('H')">H</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('I')">I</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('J')">J</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('K')">K</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('L')">L</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('M')">M</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('N')">N</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('O')">O</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('P')">P</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('Q')">Q</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('R')">R</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('S')">S</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('T')">T</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('U')">U</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('V')">V</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('W')">W</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('X')">X</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('Y')">Y</a>
+    <a href="#" class="sorting-link" onclick="sortAlphabetically('Z')">Z</a>
+        </div>
+          <!-- Sort dropdown menu by category -->
+        
+        <div class="sort-dropdown">
+            <h3 style="padding-top: 20px; padding-bottom: 20px; padding-left: 15px; color: #B40023; text-align: center;">or sort by dialect</h3>
+            <select id="categorySelect" onchange="sortCategory(this.value)">
+                <option value="">Sort by Dialect</option>
+                <option value="Buhinon">Buhinon</option>
+                <option value="Oasnon/West Miraya">Oasnon/West Miraya</option>
+                <option value="Libon">Libon</option>
+                <option value="Daraga/East Miraya">Daraga/East Miraya</option>
+                <option value="Rinconada">Rinconada</option>
+            </select>
+        </div>
+  
+          <!-- List of words wrapped in containers -->
+  
+          <div id="message" class="message-container">
+            <ion-icon name="alert-circle-outline" class="message-icon"></ion-icon>
+            <span class="message-text">No words found.</span>
+          </div>
+
+          <div class="word-list">
+            <a href="word.html"><div class="word-container" id="word1" data-dialect="Rinconada">babayē</div></a>
+          <div class="word-container" id="word2" data-dialect="Rinconada"> yamən</div>
+          <div class="word-container" id="word3" data-dialect="Rinconada">tayî</div>
+          <div class="word-container" id="word4" data-dialect="Rinconada">payō</div>
+          <div class="word-container" id="word5" data-dialect="Rinconada">tayû</div>
+          <div class="word-container" id="word6" data-dialect="Rinconada">yəkyək</div>
+          <div class="word-container" id="word7" data-dialect="Rinconada">balaw</div>
+          <div class="word-container" id="word8" data-dialect="Rinconada">sigew</div>
+          <div class="word-container" id="word9" data-dialect="Rinconada">isiw</div>
+          <div class="word-container" id="word10" data-dialect="Rinconada">aldow</div>
+          <div class="word-container" id="word1" data-dialect="Rinconada">taluw</div>
+          <div class="word-container" id="word2" data-dialect="Rinconada">sabəw</div>
+          <div class="word-container" id="word3" data-dialect="Rinconada">īwas</div>
+          <div class="word-container" id="word4" data-dialect="Rinconada">suwê</div>
+          <div class="word-container" id="word5" data-dialect="Rinconada">lāwig</div>
+          <div class="word-container" id="word6" data-dialect="Rinconada">rawut</div>
+          <div class="word-container" id="word7" data-dialect="Rinconada">pāwət</div>
+          <div class="word-container" id="word8" data-dialect="Rinconada">labāɣan</div>
+          <div class="word-container" id="word9" data-dialect="Rinconada">pondoɣē</div>
+          <div class="word-container" id="word10" data-dialect="Rinconada">kaɣon</div>
+          <div class="word-container" id="word1" data-dialect="Rinconada">daɣun</div>
+          <div class="word-container" id="word2" data-dialect="Rinconada">baɣəw</div>
+          <div class="word-container" id="word3" data-dialect="Rinconada">kawoy</div>
+          <div class="word-container" id="word4" data-dialect="Rinconada">sabləy</div>
+          <div class="word-container" id="word5" data-dialect="Rinconada">maray</div>
+          <div class="word-container" id="word6" data-dialect="Rinconada">baluy</div>
+          <div class="word-container" id="word7" data-dialect="Rinconada">aləp</div>
+          <div class="word-container" id="word8" data-dialect="Rinconada">ārak</div>
+          <div class="word-container" id="word9" data-dialect="Rinconada">bādô</div>
+          <div class="word-container" id="word10" data-dialect="Rinconada">kamət</div>
+          <div class="word-container" id="word1" data-dialect="Rinconada">dəlag</div>
+          <div class="word-container" id="word2" data-dialect="Rinconada">erak</div>
+          <div class="word-container" id="word3" data-dialect="Rinconada">kalē</div>
+          <div class="word-container" id="word4" data-dialect="Rinconada">əŋət</div>
+          <div class="word-container" id="word5" data-dialect="Rinconada">ə̄lâ</div>
+          <div class="word-container" id="word6" data-dialect="Rinconada">gab-ī</div>
+          <div class="word-container" id="word7" data-dialect="Rinconada">sahâ</div>
+          <div class="word-container" id="word8" data-dialect="Rinconada">baɣog</div>
+          <div class="word-container" id="word9" data-dialect="Rinconada">ikā</div>
+          <div class="word-container" id="word10" data-dialect="Rinconada">īkaw</div>
+          <div class="word-container" id="word1" data-dialect="Rinconada">tadjok</div>
+          <div class="word-container" id="word2" data-dialect="Rinconada">lətəw</div>
+          <div class="word-container" id="word3" data-dialect="Rinconada">matā</div>
+          <div class="word-container" id="word4" data-dialect="Rinconada">nəknək</div>
+          <div class="word-container" id="word5" data-dialect="Rinconada">ŋipən</div>
+          <div class="word-container" id="word6" data-dialect="Rinconada">oroŋ</div>
+          <div class="word-container" id="word7" data-dialect="Rinconada">ōmol</div>
+          <div class="word-container" id="word8" data-dialect="Rinconada">parəy</div>
+          <div class="word-container" id="word9" data-dialect="Rinconada">rayô</div>
+          <div class="word-container" id="word10" data-dialect="Rinconada">saləg</div>
+          <div class="word-container" id="word6" data-dialect="Rinconada">tagbâ</div>
+          <div class="word-container" id="word7" data-dialect="Rinconada">uran</div>
+          <div class="word-container" id="word8" data-dialect="Rinconada">ūri</div>
+          <div class="word-container" id="word9" data-dialect="Rinconada">warak</div>
+          <div class="word-container" id="word10" data-dialect="Rinconada">yabâ</div>
+
+             <!-- List of Buhinon --> 
+            <div class="word-container" id="word1" data-dialect="Buhinon">kaˈmət</div>
+            <div class="word-container" id="word2" data-dialect="Buhinon">waˈla</div>
+            <div class="word-container" id="word3" data-dialect="Buhinon">toˈʔo</div>
+            <div class="word-container" id="word4" data-dialect="Buhinon">paˈʔa</div>
+            <div class="word-container" id="word5" data-dialect="Buhinon">ʔaˈɡi</div>
+            <div class="word-container" id="word6" data-dialect="Buhinon">tinamˈpo</div>
+            <div class="word-container" id="word7" data-dialect="Buhinon">pumunta</div>
+            <div class="word-container" id="word8" data-dialect="Buhinon">biˈrik</div>
+            <div class="word-container" id="word9" data-dialect="Buhinon">laˈŋoj</div>
+            <div class="word-container" id="word10" data-dialect="Buhinon">maʔaˈtiʔ</div>
+            <div class="word-container" id="word11" data-dialect="Buhinon">ʔalˈpoɡ</div>
+            <div class="word-container" id="word12" data-dialect="Buhinon">koˈlit</div>
+            <div class="word-container" id="word13" data-dialect="Buhinon">taɣodˈtod</div>
+            <div class="word-container" id="word14" data-dialect="Buhinon">təˈjan</div>
+            <div class="word-container" id="word15" data-dialect="Buhinon">toʔˈwaŋ</div>
+            <div class="word-container" id="word16" data-dialect="Buhinon">bitoˈka</div>
+            <div class="word-container" id="word17" data-dialect="Buhinon">ʔaˈtaj</div>
+            <div class="word-container" id="word18" data-dialect="Buhinon">soˈso</div>
+            <div class="word-container" id="word19" data-dialect="Buhinon">ʔiˈsi</div>
+            <div class="word-container" id="word20" data-dialect="Buhinon">ʔiˈsip</div>
+            <div class="word-container" id="word21" data-dialect="Buhinon">taˈkot</div>
+            <div class="word-container" id="word22" data-dialect="Buhinon">roˈɡoʔ</div>
+            <div class="word-container" id="word23" data-dialect="Buhinon">paˈjo</div>
+            <div class="word-container" id="word24" data-dialect="Buhinon">liˈʔəɡ</div>
+            <div class="word-container" id="word25" data-dialect="Buhinon">boˈwok</div>
+            <div class="word-container" id="word25" data-dialect="Buhinon">boˈwok</div>
+            <div class="word-container" id="word26" data-dialect="Buhinon">ʔoˈroŋ</div>
+            <div class="word-container" id="word27" data-dialect="Buhinon">niʔiˈŋa</div>
+            <div class="word-container" id="word28" data-dialect="Buhinon">paˈroŋ</div>
+            <div class="word-container" id="word29" data-dialect="Buhinon">ŋoˈsoʔ</div>
+            <div class="word-container" id="word30" data-dialect="Buhinon">ŋiˈpən</div>
+            <div class="word-container" id="word31" data-dialect="Buhinon">riˈraʔ</div>
+            <div class="word-container" id="word32" data-dialect="Buhinon">ŋakˈŋak</div>
+            <div class="word-container" id="word33" data-dialect="Buhinon">soˈka</div>
+            <div class="word-container" id="word34" data-dialect="Buhinon">loˈdaʔ</div>
+            <div class="word-container" id="word35" data-dialect="Buhinon">kaˈʔən</div>
+            <div class="word-container" id="word36" data-dialect="Buhinon">ʔiˈnom</div>
+            <div class="word-container" id="word37" data-dialect="Buhinon">ʔəbˈʔəb</div>
+            <div class="word-container" id="word38" data-dialect="Buhinon">səpˈsəp</div>
+            <div class="word-container" id="word39" data-dialect="Buhinon">taliˈŋa</div>
+            <div class="word-container" id="word40" data-dialect="Buhinon">rəˈŋəɡ</div>
+            <div class="word-container" id="word41" data-dialect="Buhinon">maˈta</div>
+            <div class="word-container" id="word42" data-dialect="Buhinon">səˈɣəŋ</div>
+            <div class="word-container" id="word43" data-dialect="Buhinon">toˈroɡ</div>
+            <div class="word-container" id="word44" data-dialect="Buhinon">saŋˈdəj</div>
+            <div class="word-container" id="word45" data-dialect="Buhinon">ʔəˈɣaʔ</div>
+            <div class="word-container" id="word46" data-dialect="Buhinon">tinˈdəɡ</div>
+            <div class="word-container" id="word47" data-dialect="Buhinon">taˈwo</div>
+            <div class="word-container" id="word48" data-dialect="Buhinon">laɣaˈki</div>
+            <div class="word-container" id="word49" data-dialect="Buhinon">babaˈji</div>
+            <div class="word-container" id="word50" data-dialect="Buhinon">ʔaˈɡin</div>
+            <div class="word-container" id="word51" data-dialect="Buhinon">sәˈɣәd na laɣaˈki</div>
+            <div class="word-container" id="word52" data-dialect="Buhinon">sәˈɣәd na babaˈji</div>
+            <div class="word-container" id="word53" data-dialect="Buhinon">ʔiˈnaʔ</div>
+            <div class="word-container" id="word54" data-dialect="Buhinon">ʔaˈmaʔ</div>
+            <div class="word-container" id="word55" data-dialect="Buhinon">ŋaˈran</div>
+            <div class="word-container" id="word56" data-dialect="Buhinon">sabˈjən</div>
+            <div class="word-container" id="word57" data-dialect="Buhinon">loˈbid</div>
+            <div class="word-container" id="word58" data-dialect="Buhinon">ɡəʔˈran</div>
+            <div class="word-container" id="word59" data-dialect="Buhinon">taˈjiʔ</div>
+            <div class="word-container" id="word60" data-dialect="Buhinon">raʔˈkəp</div>
+            <div class="word-container" id="word61" data-dialect="Buhinon">boˈnoʔ</div>
+            <div class="word-container" id="word62" data-dialect="Buhinon">soˈɡat</div>
+            <div class="word-container" id="word63" data-dialect="Buhinon">ɡəraʔˈnən</div>
+            <div class="word-container" id="word64" data-dialect="Buhinon">ɡəraˈʔan</div>
+            <div class="word-container" id="word65" data-dialect="Buhinon">bwaj</div>
+            <div class="word-container" id="word66" data-dialect="Buhinon">kaˈɡaw</div>
+            <div class="word-container" id="word67" data-dialect="Buhinon">potˈlon</div>
+            <div class="word-container" id="word68" data-dialect="Buhinon">taˈras</div>
+            <div class="word-container" id="word69" data-dialect="Buhinon">ɡiˈriw</div>
+            <div class="word-container" id="word70" data-dialect="Buhinon">baˈʔak</div>
+            <div class="word-container" id="word71" data-dialect="Buhinon">mataˈrəm</div>
+            <div class="word-container" id="word72" data-dialect="Buhinon">maŋəˈrəw</div>
+            <div class="word-container" id="word73" data-dialect="Buhinon">ɡəˈtək</div>
+            <div class="word-container" id="word74" data-dialect="Buhinon">pəˈɡaʔ</div>
+            <div class="word-container" id="word75" data-dialect="Buhinon">kapˈtan</div>
+            <div class="word-container" id="word76" data-dialect="Buhinon">nikaˈwot</div>
+            <div class="word-container" id="word77" data-dialect="Buhinon">ʔəˈmət</div>
+            <div class="word-container" id="word78" data-dialect="Buhinon">ʔoˈloɡ</div>
+            <div class="word-container" id="word79" data-dialect="Buhinon">ʔaˈjam</div>
+            <div class="word-container" id="word80" data-dialect="Buhinon">baˈjoŋ</div>
+            <div class="word-container" id="word81" data-dialect="Buhinon">ʔoˈmon</div>
+            <div class="word-container" id="word82" data-dialect="Buhinon">ɡaˈbi</div>
+            <div class="word-container" id="word83" data-dialect="Buhinon">pakˈpak</div>
+            <div class="word-container" id="word84" data-dialect="Buhinon">laˈjoɡ</div>
+            <div class="word-container" id="word85" data-dialect="Buhinon">laˈman</div>
+            <div class="word-container" id="word86" data-dialect="Buhinon">taˈbaʔ</div>
+            <div class="word-container" id="word87" data-dialect="Buhinon">ʔiˈkoɡ</div>
+            <div class="word-container" id="word88" data-dialect="Buhinon">ʔaˈɣas</div>
+            <div class="word-container" id="word89" data-dialect="Buhinon">ʔoˈɣod</div>
+            <div class="word-container" id="word90" data-dialect="Buhinon">koˈto</div>
+            <div class="word-container" id="word91" data-dialect="Buhinon">kulalagbaw</div>
+            <div class="word-container" id="word92" data-dialect="Buhinon">gagamba</div>
+            <div class="word-container" id="word93" data-dialect="Buhinon">ʔisˈraʔ</div>
+            <div class="word-container" id="word94" data-dialect="Buhinon">ləˈpaʔ</div>
+            <div class="word-container" id="word95" data-dialect="Buhinon">daˈwon</div>
+            <div class="word-container" id="word96" data-dialect="Buhinon">ɡaˈmot</div>
+            <div class="word-container" id="word97" data-dialect="Buhinon">boˈrak</div>
+            <div class="word-container" id="word98" data-dialect="Buhinon">proˈtas</div>
+            <div class="word-container" id="word99" data-dialect="Buhinon">ʔaˈwot</div>
+            <div class="word-container" id="word100" data-dialect="Buhinon">raˈɡaʔ</div>
+            <div class="word-container" id="word101" data-dialect="Buhinon">baˈto</div>
+            <div class="word-container" id="word102" data-dialect="Buhinon">bajˈbaj</div>
+            <div class="word-container" id="word103" data-dialect="Buhinon">toˈbiɡ</div>
+            <div class="word-container" id="word104" data-dialect="Buhinon">boˈlos</div>
+            <div class="word-container" id="word105" data-dialect="Buhinon">daˈɡat</div>
+            <div class="word-container" id="word106" data-dialect="Buhinon">ʔaˈsin</div>
+            <div class="word-container" id="word107" data-dialect="Buhinon">laˈwəd</div>
+            <div class="word-container" id="word108" data-dialect="Buhinon">laˈŋit</div>
+            <div class="word-container" id="word109" data-dialect="Buhinon">boˈlan</div>
+            <div class="word-container" id="word110" data-dialect="Buhinon">bitoˈʔon</div>
+            <div class="word-container" id="word111" data-dialect="Buhinon">paŋanoˈron</div>
+            <div class="word-container" id="word112" data-dialect="Buhinon">ʔamˈbon</div>
+            <div class="word-container" id="word113" data-dialect="Buhinon">ʔoˈran</div>
+            <div class="word-container" id="word114" data-dialect="Buhinon">paˈrəs</div>
+            <div class="word-container" id="word115" data-dialect="Buhinon">paˈrəs</div>
+            <div class="word-container" id="word116" data-dialect="Buhinon">laʔiˈnit</div>
+            <div class="word-container" id="word117" data-dialect="Buhinon">maliˈpət</div>
+            <div class="word-container" id="word118" data-dialect="Buhinon">maˈra</div>
+            <div class="word-container" id="word119" data-dialect="Buhinon">səˈməɡ</div>
+            <div class="word-container" id="word120" data-dialect="Buhinon">mabәʔˈɡat</div>
+            <div class="word-container" id="word121" data-dialect="Buhinon">kalaˈjo</div>
+            <div class="word-container" id="word122" data-dialect="Buhinon">soˈloʔ</div>
+            <div class="word-container" id="word123" data-dialect="Buhinon">ʔaˈso</div>
+            <div class="word-container" id="word124" data-dialect="Buhinon">ʔaˈbo</div>
+            <div class="word-container" id="word125" data-dialect="Buhinon">ʔiˈtəm</div>
+            <div class="word-container" id="word126" data-dialect="Buhinon">poˈtiʔ</div>
+            <div class="word-container" id="word127" data-dialect="Buhinon">poˈla</div>
+            <div class="word-container" id="word128" data-dialect="Buhinon">jiˈlo</div>
+            <div class="word-container" id="word129" data-dialect="Buhinon">birˈdi</div>
+            <div class="word-container" id="word130" data-dialect="Buhinon">saˈdaj</div>
+            <div class="word-container" id="word131" data-dialect="Buhinon">dakəˈɣəʔ</div>
+            <div class="word-container" id="word132" data-dialect="Buhinon">ʔaliʔˈpot</div>
+            <div class="word-container" id="word133" data-dialect="Buhinon">ʔalaˈbaʔ</div>
+            <div class="word-container" id="word134" data-dialect="Buhinon">maniˈpis</div>
+            <div class="word-container" id="word135" data-dialect="Buhinon">maiʔˈbәɡ</div>
+            <div class="word-container" id="word136" data-dialect="Buhinon">piɡiˈpit</div>
+            <div class="word-container" id="word137" data-dialect="Buhinon">maʔiˈwas</div>
+            <div class="word-container" id="word138" data-dialect="Buhinon">makələg</div>
+            <div class="word-container" id="word139" data-dialect="Buhinon">lakələg</div>
+            <div class="word-container" id="word140" data-dialect="Buhinon">ilang</div>
+            <div class="word-container" id="word141" data-dialect="Buhinon">sə'pəg</div>
+            <div class="word-container" id="word142" data-dialect="Buhinon">ɡoˈraŋ</div>
+            <div class="word-container" id="word143" data-dialect="Buhinon">baˈɡo</div>
+            <div class="word-container" id="word144" data-dialect="Buhinon">maˈraj</div>
+            <div class="word-container" id="word145" data-dialect="Buhinon">maraˈʔət</div>
+            <div class="word-container" id="word146" data-dialect="Buhinon">taɣˈma</div>
+            <div class="word-container" id="word147" data-dialect="Buhinon">taˈma</div>
+            <div class="word-container" id="word148" data-dialect="Buhinon">ɡaʔˈbi</div>
+            <div class="word-container" id="word149" data-dialect="Buhinon">ʔalˈdaw</div>
+            <div class="word-container" id="word150" data-dialect="Buhinon">taˈʔon</div>
+            <div class="word-container" id="word151" data-dialect="Buhinon">kinaoˈno</div>
+            <div class="word-container" id="word152" data-dialect="Buhinon">ʔadto ˈsa</div>
+            <div class="word-container" id="word153" data-dialect="Buhinon">sa</div>
+            <div class="word-container" id="word154" data-dialect="Buhinon">ta'as</div>
+            <div class="word-container" id="word155" data-dialect="Buhinon">ʔaˈdi</div>
+            <div class="word-container" id="word156" data-dialect="Buhinon">ʔaˈʔan</div>
+            <div class="word-container" id="word157" data-dialect="Buhinon">ʔaraˈni</div>
+            <div class="word-container" id="word158" data-dialect="Buhinon">ʔaraˈjoʔ</div>
+            <div class="word-container" id="word159" data-dialect="Buhinon">saʔˈri</div>
+            <div class="word-container" id="word160" data-dialect="Buhinon">ʔaˈko</div>
+            <div class="word-container" id="word161" data-dialect="Buhinon">ʔiˈka</div>
+            <div class="word-container" id="word162" data-dialect="Buhinon">ʔiˈja</div>
+            <div class="word-container" id="word163" data-dialect="Buhinon">kiˈta</div>
+            <div class="word-container" id="word164" data-dialect="Buhinon">kaˈmo</div>
+            <div class="word-container" id="word165" data-dialect="Buhinon">siˈra</div>
+            <div class="word-container" id="word166" data-dialect="Buhinon">ʔoˈno</div>
+            <div class="word-container" id="word167" data-dialect="Buhinon">siʔiˈsaj</div>
+            <div class="word-container" id="word168" data-dialect="Buhinon">ʔiˈba</div>
+            <div class="word-container" id="word169" data-dialect="Buhinon">ŋaʔˈmin</div>
+            <div class="word-container" id="word170" data-dialect="Buhinon">saɡˈkəd</div>
+            <div class="word-container" id="word171" data-dialect="Buhinon">kin</div>
+            <div class="word-container" id="word172" data-dialect="Buhinon">paoˈno</div>
+            <div class="word-container" id="word173" data-dialect="Buhinon">ʔinˈdiʔ</div>
+            <div class="word-container" id="word174" data-dialect="Buhinon">biˈlaŋ</div>
+            <div class="word-container" id="word175" data-dialect="Buhinon">ʔәˈsad</div>
+            <div class="word-container" id="word176" data-dialect="Buhinon">doˈwa</div>
+            <div class="word-container" id="word177" data-dialect="Buhinon">toˈlo</div>
+            <div class="word-container" id="word178" data-dialect="Buhinon">ʔәˈpat</div>
+            <div class="word-container" id="word179" data-dialect="Buhinon">liˈma</div>
+
+            <!-- List of Daraga --> 
+
+            <div class="word-container" id="word180" data-dialect="Daraga/East Miraya">kamu</div>
+            <div class="word-container" id="word181" data-dialect="Daraga/East Miraya">kita</div>
+            <div class="word-container" id="word182" data-dialect="Daraga/East Miraya">qisad</div>
+            <div class="word-container" id="word183" data-dialect="Daraga/East Miraya">duwa</div>
+            <div class="word-container" id="word184" data-dialect="Daraga/East Miraya">tawu</div>
+            <div class="word-container" id="word185" data-dialect="Daraga/East Miraya">siraq</div>
+            <div class="word-container" id="word186" data-dialect="Daraga/East Miraya">qayam</div>
+            <div class="word-container" id="word187" data-dialect="Daraga/East Miraya">kutu</div>
+            <div class="word-container" id="word188" data-dialect="Daraga/East Miraya">kawuy</div>
+            <div class="word-container" id="word189" data-dialect="Daraga/East Miraya">dawun</div>
+            <div class="word-container" id="word190" data-dialect="Daraga/East Miraya">kulit</div>
+            <div class="word-container" id="word191" data-dialect="Daraga/East Miraya">duguq</div>
+            <div class="word-container" id="word192" data-dialect="Daraga/East Miraya">tuqlaN</div>
+            <div class="word-container" id="word193" data-dialect="Daraga/East Miraya">suNay</div>
+            <div class="word-container" id="word194" data-dialect="Daraga/East Miraya">taliNa</div>
+            <div class="word-container" id="word195" data-dialect="Daraga/East Miraya">mata</div>
+            <div class="word-container" id="word196" data-dialect="Daraga/East Miraya">quruN</div>
+            <div class="word-container" id="word197" data-dialect="Daraga/East Miraya">Nipin</div>
+            <div class="word-container" id="word198" data-dialect="Daraga/East Miraya">dilaq</div>
+            <div class="word-container" id="word199" data-dialect="Daraga/East Miraya">tu7ud</div>
+            <div class="word-container" id="word200" data-dialect="Daraga/East Miraya">kamit</div>
+            <div class="word-container" id="word201" data-dialect="Daraga/East Miraya">susu</div>
+            <div class="word-container" id="word202" data-dialect="Daraga/East Miraya">qatay</div>
+            <div class="word-container" id="word203" data-dialect="Daraga/East Miraya">qinum</div>
+            <div class="word-container" id="word204" data-dialect="Daraga/East Miraya">kita</div>
+            <div class="word-container" id="word205" data-dialect="Daraga/East Miraya">diNig</div>
+            <div class="word-container" id="word206" data-dialect="Daraga/East Miraya">giran</div>
+            <div class="word-container" id="word207" data-dialect="Daraga/East Miraya">qabut</div>
+            <div class="word-container" id="word208" data-dialect="Daraga/East Miraya">qaldaw</div>
+            <div class="word-container" id="word209" data-dialect="Daraga/East Miraya">bituqun</div>
+            <div class="word-container" id="word210" data-dialect="Daraga/East Miraya">tubig</div>
+            <div class="word-container" id="word211" data-dialect="Daraga/East Miraya">batu</div>
+            <div class="word-container" id="word212" data-dialect="Daraga/East Miraya">kalayu</div>
+            <div class="word-container" id="word213" data-dialect="Daraga/East Miraya">dalan</div>
+            <div class="word-container" id="word214" data-dialect="Daraga/East Miraya">bulud</div>
+            <div class="word-container" id="word215" data-dialect="Daraga/East Miraya">gaqbi</div>
+            <div class="word-container" id="word216" data-dialect="Daraga/East Miraya">punuq</div>
+            <div class="word-container" id="word217" data-dialect="Daraga/East Miraya">baqgu</div>
+            <div class="word-container" id="word218" data-dialect="Daraga/East Miraya">Naran</div>
+
+              <!-- List of Libon --> 
+
+            <div class="word-container" id="word219" data-dialect="Libon">Ata</div>
+            <div class="word-container" id="word220" data-dialect="Libon">Ako</div>
+            <div class="word-container" id="word221" data-dialect="Libon">Duman</div>
+            <div class="word-container" id="word222" data-dialect="Libon">Itom</div>
+            <div class="word-container" id="word223" data-dialect="Libon">Bata</div>
+            <div class="word-container" id="word224" data-dialect="Libon">Sili</div>
+            <div class="word-container" id="word225" data-dialect="Libon">Kakulay</div>
+            <div class="word-container" id="word226" data-dialect="Libon">Mamanok</div>
+            <div class="word-container" id="word227" data-dialect="Libon">Talong</div>
+            <div class="word-container" id="word228" data-dialect="Libon">Diri</div>
+            <div class="word-container" id="word229" data-dialect="Libon">Kamote</div>
+            <div class="word-container" id="word230" data-dialect="Libon">Kagang</div>
+            <div class="word-container" id="word231" data-dialect="Libon">Karabaw</div>
+            <div class="word-container" id="word232" data-dialect="Libon">Inut</div>
+            <div class="word-container" id="word233" data-dialect="Libon">Bungang-anghang</div>
+            <div class="word-container" id="word234" data-dialect="Libon">Kulog</div>
+            <div class="word-container" id="word235" data-dialect="Libon">Katamnan</div>
+            <div class="word-container" id="word236" data-dialect="Libon">Salog</div>
+            <div class="word-container" id="word237" data-dialect="Libon">Lukdo</div>
+            <div class="word-container" id="word238" data-dialect="Libon">Iyo</div>
+            <div class="word-container" id="word239" data-dialect="Libon">Wara</div>
+            <div class="word-container" id="word240" data-dialect="Libon">Baga</div>
+            <div class="word-container" id="word241" data-dialect="Libon">Hapit</div>
+            <div class="word-container" id="word242" data-dialect="Libon">Isog</div>
+            <div class="word-container" id="word243" data-dialect="Libon">Tikad</div>
+            <div class="word-container" id="word244" data-dialect="Libon">Inot</div>
+            <div class="word-container" id="word245" data-dialect="Libon">Butnga</div>
+            <div class="word-container" id="word246" data-dialect="Libon">Tuyog</div>
+            <div class="word-container" id="word247" data-dialect="Libon">Lambang</div>
+            <div class="word-container" id="word248" data-dialect="Libon">Tukmol</div>
+            <div class="word-container" id="word249" data-dialect="Libon">Gabos</div>
+            <div class="word-container" id="word250" data-dialect="Libon">Saging</div>
+            <div class="word-container" id="word251" data-dialect="Libon">Dagat</div>
+            <div class="word-container" id="word252" data-dialect="Libon">Bitis</div>
+            <div class="word-container" id="word253" data-dialect="Libon">Kagamit</div>
+            <div class="word-container" id="word254" data-dialect="Libon">Payo</div>
+            <div class="word-container" id="word255" data-dialect="Libon">Kulog</div>
+            <div class="word-container" id="word256" data-dialect="Libon">Urulya</div>
+            <div class="word-container" id="word257" data-dialect="Libon">Lata</div>
+            <div class="word-container" id="word258" data-dialect="Libon">Gubat</div>
+            <div class="word-container" id="word259" data-dialect="Libon">Lomos</div>
+            <div class="word-container" id="word260" data-dialect="Libon">Nono</div>
+            <div class="word-container" id="word261" data-dialect="Libon">Kag-anak</div>
+            <div class="word-container" id="word262" data-dialect="Libon">Ngurut</div>
+            <div class="word-container" id="word263" data-dialect="Libon">Tigtaram</div>
+            <div class="word-container" id="word264" data-dialect="Libon">Kagang</div>
+            <div class="word-container" id="word265" data-dialect="Libon">Bug-os</div>
+            <div class="word-container" id="word266" data-dialect="Libon">Liwanag</div>
+            <div class="word-container" id="word267" data-dialect="Libon">Sadit</div>
+            <div class="word-container" id="word268" data-dialect="Libon">Inin</div>
+            <div class="word-container" id="word269" data-dialect="Libon">Rurok</div>
+            <div class="word-container" id="word270" data-dialect="Libon">Sabi</div>
+            <div class="word-container" id="word271" data-dialect="Libon">Liko</div>
+            <div class="word-container" id="word272" data-dialect="Libon">Bukid</div>
+            <div class="word-container" id="word273" data-dialect="Libon">Tu-od</div>
+            <div class="word-container" id="word274" data-dialect="Libon">Higda</div>
+            <div class="word-container" id="word275" data-dialect="Libon">Tugang</div>
+            <div class="word-container" id="word276" data-dialect="Libon">Lamig</div>
+            <div class="word-container" id="word277" data-dialect="Libon">Hawak</div>
+            <div class="word-container" id="word278" data-dialect="Libon">Tunog</div>
+            <div class="word-container" id="word279" data-dialect="Libon">Dalan</div>
+            <div class="word-container" id="word280" data-dialect="Libon">Himo</div>
+            <div class="word-container" id="word281" data-dialect="Libon">Hikay</div>
+            <div class="word-container" id="word282" data-dialect="Libon">Tukar</div>
+            <div class="word-container" id="word283" data-dialect="Libon">Bulan</div>
+            <div class="word-container" id="word284" data-dialect="Libon">Kailangan</div>
+            <div class="word-container" id="word285" data-dialect="Libon">Buot</div>
+            <div class="word-container" id="word286" data-dialect="Libon">Talaba</div>
+            <div class="word-container" id="word287" data-dialect="Libon">Bato</div>
+            <div class="word-container" id="word288" data-dialect="Libon">Banwa</div>
+            <div class="word-container" id="word289" data-dialect="Libon">Kaangay</div>
+            <div class="word-container" id="word290" data-dialect="Libon">Mangga</div>
+            <div class="word-container" id="word291" data-dialect="Libon">Taba</div>
+            <div class="word-container" id="word292" data-dialect="Libon">Sanga</div>
+            <div class="word-container" id="word293" data-dialect="Libon">Baso</div>
+            <div class="word-container" id="word294" data-dialect="Libon">Bayo</div>
+            <div class="word-container" id="word295" data-dialect="Libon">Tambo</div>
+            <div class="word-container" id="word296" data-dialect="Libon">Bungang</div>
+            <div class="word-container" id="word297" data-dialect="Libon">Tugon</div>
+            <div class="word-container" id="word298" data-dialect="Libon">Dalagan</div>
+            <div class="word-container" id="word299" data-dialect="Libon">Higda</div>
+            <div class="word-container" id="word300" data-dialect="Libon">Batog</div>
+            <div class="word-container" id="word301" data-dialect="Libon">Takot</div>
+            <div class="word-container" id="word302" data-dialect="Libon">Kagipit</div>
+            <div class="word-container" id="word303" data-dialect="Libon">Kagutom</div>
+            <div class="word-container" id="word304" data-dialect="Libon">Kamot</div>
+            <div class="word-container" id="word305" data-dialect="Libon">Kusog</div>
+            <div class="word-container" id="word306" data-dialect="Libon">Mahigugmaon</div>
+            <div class="word-container" id="word307" data-dialect="Libon">Dakula</div>
+            <div class="word-container" id="word308" data-dialect="Libon">Bulawan</div>
+            <div class="word-container" id="word309" data-dialect="Libon">Kahoy</div>
+            <div class="word-container" id="word310" data-dialect="Libon">Lambanog</div>
+            <div class="word-container" id="word311" data-dialect="Libon">Kasangkapan</div>
+            <div class="word-container" id="word312" data-dialect="Libon">Ati-atihan</div>
+            <div class="word-container" id="word313" data-dialect="Libon">Kapatid</div>
+            <div class="word-container" id="word314" data-dialect="Libon">Bungto</div>
+            <div class="word-container" id="word315" data-dialect="Libon">Palay</div>
+            <div class="word-container" id="word316" data-dialect="Libon">Kagulangan</div>
+            <div class="word-container" id="word317" data-dialect="Libon">Tugang</div>
+            <div class="word-container" id="word318" data-dialect="Libon">Sako</div>
+            <div class="word-container" id="word319" data-dialect="Libon">Diklom</div>
+            <div class="word-container" id="word320" data-dialect="Libon">Lingaw</div>
+            <div class="word-container" id="word321" data-dialect="Libon">Kagayon</div>
+            <div class="word-container" id="word322" data-dialect="Libon">Sugpon</div>
+            <div class="word-container" id="word323" data-dialect="Libon">Kawayan</div>
+            <div class="word-container" id="word324" data-dialect="Libon">Sapa</div>
+            <div class="word-container" id="word325" data-dialect="Libon">Masakit</div>
+            <div class="word-container" id="word326" data-dialect="Libon">Ilaw</div>
+            <div class="word-container" id="word327" data-dialect="Libon">Kasakit</div>
+            <div class="word-container" id="word328" data-dialect="Libon">Hugaw</div>
+            <div class="word-container" id="word329" data-dialect="Libon">Tugang</div>
+            <div class="word-container" id="word330" data-dialect="Libon">Tanom</div>
+            <div class="word-container" id="word331" data-dialect="Libon">Rasa</div>
+            <div class="word-container" id="word332" data-dialect="Libon">Kagawad</div>
+            <div class="word-container" id="word333" data-dialect="Libon">Tago</div>
+            <div class="word-container" id="word334" data-dialect="Libon">Damo</div>
+            <div class="word-container" id="word335" data-dialect="Libon">Bawod</div>
+            <div class="word-container" id="word336" data-dialect="Libon">Aba</div>
+            <div class="word-container" id="word337" data-dialect="Libon">Bata</div>
+            <div class="word-container" id="word338" data-dialect="Libon">Tiil</div>
+            <div class="word-container" id="word339" data-dialect="Libon">Dagit</div>
+            <div class="word-container" id="word340" data-dialect="Libon">Samad</div>
+            <div class="word-container" id="word341" data-dialect="Libon">Kinahanglan</div>
+            <div class="word-container" id="word342" data-dialect="Libon">Kasamok</div>
+            <div class="word-container" id="word343" data-dialect="Libon">Baskug</div>
+            <div class="word-container" id="word344" data-dialect="Libon">Katulad</div>
+            <div class="word-container" id="word345" data-dialect="Libon">Bunay</div>
+            <div class="word-container" id="word346" data-dialect="Libon">Katugon</div>
+            <div class="word-container" id="word347" data-dialect="Libon">Kagubatan</div>
+            <div class="word-container" id="word348" data-dialect="Libon">Kulay</div>
+            <div class="word-container" id="word349" data-dialect="Libon">Kangalas</div>
+            <div class="word-container" id="word350" data-dialect="Libon">Kamot</div>
+            <div class="word-container" id="word351" data-dialect="Libon">Sikad</div>
+            <div class="word-container" id="word352" data-dialect="Libon">Balik</div>
+            <div class="word-container" id="word353" data-dialect="Libon">Kagrabehan</div>
+            <div class="word-container" id="word354" data-dialect="Libon">Bagyo</div>
+            <div class="word-container" id="word355" data-dialect="Libon">Kusug</div>
+            <div class="word-container" id="word356" data-dialect="Libon">Asin</div>
+            <div class="word-container" id="word357" data-dialect="Libon">Lawas</div>
+            <div class="word-container" id="word358" data-dialect="Libon">Linog</div>
+            <div class="word-container" id="word359" data-dialect="Libon">Habol</div>
+            <div class="word-container" id="word360" data-dialect="Libon">Dalan</div>
+            <div class="word-container" id="word361" data-dialect="Libon">Timpla</div>
+            <div class="word-container" id="word362" data-dialect="Libon">Talon</div>
+            <div class="word-container" id="word363" data-dialect="Libon">Kabugtuan</div>
+            <div class="word-container" id="word364" data-dialect="Libon">Kama</div>
+            <div class="word-container" id="word365" data-dialect="Libon">Salag</div>
+            <div class="word-container" id="word366" data-dialect="Libon">Kagutok</div>
+            <div class="word-container" id="word367" data-dialect="Libon">Hagom</div>
+            <div class="word-container" id="word368" data-dialect="Libon">Langit</div>
+            <div class="word-container" id="word369" data-dialect="Libon">Lingkor</div>
+            <div class="word-container" id="word370" data-dialect="Libon">Kambyo</div>
+            <div class="word-container" id="word371" data-dialect="Libon">Kagubatan</div>
+            <div class="word-container" id="word372" data-dialect="Libon">Bunot</div>
+            <div class="word-container" id="word373" data-dialect="Libon">Kagadanan</div>
+            <div class="word-container" id="word374" data-dialect="Libon">Sabaw</div>
+            <div class="word-container" id="word375" data-dialect="Libon">Linuto</div>
+            <div class="word-container" id="word376" data-dialect="Libon">Kagahuman</div>
+            <div class="word-container" id="word377" data-dialect="Libon">Hagin</div>
+            <div class="word-container" id="word378" data-dialect="Libon">Kapoy</div>
+            <div class="word-container" id="word379" data-dialect="Libon">Tuno</div>
+            <div class="word-container" id="word380" data-dialect="Libon">Kagawasan</div>
+            <div class="word-container" id="word381" data-dialect="Libon">Kalipay</div>
+            <div class="word-container" id="word382" data-dialect="Libon">Anghel</div>
+            <div class="word-container" id="word383" data-dialect="Libon">Palakpak</div>
+            <div class="word-container" id="word384" data-dialect="Libon">Durog</div>
+            <div class="word-container" id="word385" data-dialect="Libon">Salingsing</div>
+            <div class="word-container" id="word386" data-dialect="Libon">Halang</div>
+            <div class="word-container" id="word387" data-dialect="Libon">Kanluran</div>
+            <div class="word-container" id="word388" data-dialect="Libon">Silong</div>
+            <div class="word-container" id="word389" data-dialect="Libon">Kaon</div>
+            <div class="word-container" id="word390" data-dialect="Libon">Tikang</div>
+            <div class="word-container" id="word391" data-dialect="Libon">Kinasingkasing</div>
+            <div class="word-container" id="word392" data-dialect="Libon">Lig-ong</div>
+            <div class="word-container" id="word393" data-dialect="Libon">Limpyo</div>
+            <div class="word-container" id="word394" data-dialect="Libon">Marhay</div>
+            <div class="word-container" id="word395" data-dialect="Libon">Magurang</div>
+            <div class="word-container" id="word396" data-dialect="Libon">Marahay</div>
+            <div class="word-container" id="word397" data-dialect="Libon">Pinakamarahay</div>
+            <div class="word-container" id="word398" data-dialect="Libon">Marhay na aga</div>
+            <div class="word-container" id="word399" data-dialect="Libon">Marhay na hapon</div>
+            <div class="word-container" id="word400" data-dialect="Libon">Marhay na banggi</div>
+            <div class="word-container" id="word401" data-dialect="Libon">Padi</div>
+            <div class="word-container" id="word402" data-dialect="Libon">Alagad</div>
+            <div class="word-container" id="word403" data-dialect="Libon">Ina</div>
+            <div class="word-container" id="word404" data-dialect="Libon">Tatay</div>
+            <div class="word-container" id="word405" data-dialect="Libon">Suroy</div>
+            <div class="word-container" id="word406" data-dialect="Libon">Tinirikan</div>
+            <div class="word-container" id="word407" data-dialect="Libon">Bagas</div>
+            <div class="word-container" id="word408" data-dialect="Libon">Paglaom</div>
+            <div class="word-container" id="word409" data-dialect="Libon">Tiempo</div>
+            <div class="word-container" id="word410" data-dialect="Libon">Tultol</div>
+            <div class="word-container" id="word411" data-dialect="Libon">Kaaram</div>
+            <div class="word-container" id="word412" data-dialect="Libon">Balas</div>
+            <div class="word-container" id="word413" data-dialect="Libon">Lubid</div>
+            <div class="word-container" id="word414" data-dialect="Libon">Payong</div>
+            <div class="word-container" id="word415" data-dialect="Libon">Tasa</div>
+            <div class="word-container" id="word416" data-dialect="Libon">Tagipusuon</div>
+            <div class="word-container" id="word417" data-dialect="Libon">Paghigugma</div>
+            <div class="word-container" id="word418" data-dialect="Libon">Sabaw</div>
+             
+        </div>
+  
+      </div>
+      <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="f-menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Dialects</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Forum</a></li>
+      
+        </ul>
+        <p>2024 Albay Dialects | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+
+    <script>
+     function sortCategory(category) {
+        // Get all word containers
+        const wordContainers = document.querySelectorAll(".word-container");
+
+        // Iterate over each word container
+        wordContainers.forEach(wordContainer => {
+            const dialect = wordContainer.dataset.dialect;
+
+            // Check if the word belongs to the selected category
+            if (category === "" || dialect === category) {
+                // Show the word
+                wordContainer.style.display = "block";
+            } else {
+                // Hide the word
+                wordContainer.style.display = "none";
+            }
+        });
+    }
+
+    function sortAlphabetically(letter) {
+    // Get all word containers
+    const wordContainers = document.querySelectorAll(".word-container");
+
+    let wordsFound = false; // Variable to track if any words are found for the clicked letter
+
+    // Iterate over each word container
+    wordContainers.forEach(wordContainer => {
+        const firstLetter = wordContainer.textContent.trim().charAt(0).toUpperCase();
+
+        // Check if the first letter matches the selected letter
+        if (firstLetter === letter) {
+            // Show the word
+            wordContainer.style.display = "block";
+            wordsFound = true; // Set to true if at least one word is found
+        } else {
+            // Hide the word
+            wordContainer.style.display = "none";
+        }
+    });
+
+    // Show message if no words are found for the clicked letter
+    if (!wordsFound) {
+        showMessage("No words found for letter " + letter);
+    } else {
+        hideMessage(); // Hide the message if words are found
+    }
+}
+
+function showMessage(message) {
+    // Display the message
+    const messageContainer = document.getElementById("message");
+    messageContainer.textContent = message;
+    messageContainer.style.display = "block";
+}
+
+function hideMessage() {
+    // Hide the message
+    const messageContainer = document.getElementById("message");
+    messageContainer.style.display = "none";
+}
+
+document.querySelectorAll('.sorting-link').forEach(item => {
+    item.addEventListener('click', event => {
+        const letter = event.target.textContent; // Get the clicked letter
+        sortAlphabetically(letter); // Sort alphabetically based on the clicked letter
+    });
+});
+
+    document.getElementById('searchButton').addEventListener('click', function() {
+        // Perform search functionality here
+        alert('Performing search...');
+    });
+    </script>
+
+<button onclick="scrollToTop()" id="scrollBtn" title="Go to top"></button>
+<script src="script.js"></script>
+                
+    </body>
+    </html>
